@@ -1,6 +1,6 @@
 package main
 
-import . "fmt"
+import "fmt"
 
 /*
 Требуется определить, является ли данный год високосным, напомним:
@@ -15,17 +15,17 @@ import . "fmt"
 Требуется вывести слово YES, если год является високосным и NO - в противном случае.
 */
 
-func main() {
-	LeapYear()
-}
-
 func LeapYear() {
 	var year int
-	Print("Введи год: ")
-	Scan(&year)
+	fmt.Print("Введи год: ")
+	fmt.Scan(&year)
 	if year%400 == 0 || (year%4 == 0 && year%100 != 0) {
-		Println("YES")
+		fmt.Println("YES")
 	} else {
-		Println("NO")
+		fmt.Println("NO")
 	}
+}
+
+func main() {
+	LeapYear()
 }
